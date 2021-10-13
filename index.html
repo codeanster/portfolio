@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfolio</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/superslides.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="https://kit.fontawesome.com/b4b25c656f.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+
+</head>
+<body>
+
+	<div class='loader'>
+
+		<div class='inner'></div>
+
+	</div>
+
+	<div id="slides">
+
+		<div class = 'overlay'></div>
+
+		<div class="slides-container">
+			<img src="img/slide1.jpg" alt="">
+			<img src="img/slide2.jpg" alt="">
+		</div>
+
+		<div class="titleMessage">
+			<div class='heading'>
+				<p class="main">Gonzalo Tucker</p>
+				<p class="sub typed"></p>
+			</div>
+
+		</div>
+
+
+		<nav class="slides-navigation">
+		<a href="#" class="next"></a>
+		<a href="#" class="prev"></a>
+		</nav>
+	
+	
+	
+	</div>
+
+	<nav id="navigation" class="navbar navbar-expand-lg">
+		<a class="navbar-brand" href="#">Welcome</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#skills">Skills</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#stats">Stats</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#contact">Resume</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#portfolio">Portfolio</a>
+			</li>
+		  </ul>
+		</div>
+	  </nav>
+
+	<div id='about' class='section'>
+		<div class='container'>
+
+			<div class='row'> 
+
+				<div class = 'col-md-5'>
+					<img class='aboutImage' src="img/about.jpg" alt="">
+				</div>
+
+				<div class='col-md-7'>
+					
+					<h4> My name is Gonzalo Tucker</h4>
+					<p style="font-size: 16px">	I have a strong background in Astrophysics and mathematics. I started my career after college working as a lab technician, where I started gaining more responsibilities,doing more softwork engineering and QA testing. I really enjoyed working with data, Python and SQL, and so I decided to transition into a more data centric role since it is the type of role I thrive in and provide the most value.
+						
+						<br>
+						<br>
+					
+					I am a creative thinker, stubborn about quitting halfway through a problem, and have experience solving questions about the nature of the universe, to more grounded topics like "how can I make this data in the database useful?" or "how can I automate this process?"</p>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id='skills' class='skillsSection section'>
+		<div class='container'>
+
+			<div class='row'> 
+				<div class = 'col-md-12 text-center'> 
+					<h2> TECHNICAL SKILLS</h2>
+					<p>A representation of my proficiency in each skill</p>
+				</div>
+
+				<div class="owl-carousel owl-theme">
+					
+					<div class='skill'>
+						<span class='chart' data-percent='80'>
+							<span class='percent'> 80 </span>
+							<canvas height='152' width="152"></canvas>
+						</span>
+						<h4>Python</h4>
+						<p> Pandas | NumPy | Matplotlib | Tensorflow | Scikit-learn | Seaborn | Flask </p>
+					</div>
+					
+					<div class='skill'>
+						<span class='chart' data-percent='75'>
+							<span class='percent'> 75 </span>
+							<canvas height='152' width="152"></canvas>
+						</span>
+						<h4>Data Analysis</h4>
+						<p> Machine Learning | Deep Learning | ETL | PySpark | Tableau | Automations
+						</p>
+					</div>
+					
+					<div class='skill'>
+						<span class='chart' data-percent='45'>
+							<span class='percent'> 45 </span>
+							<canvas height='152' width="152"></canvas>
+						</span>
+						<h4>MySQL</h4>
+						<p> Cleaning | Transforming | Testing </p>
+					</div>
+
+					<div class='skill'>
+						<span class='chart' data-percent='35'>
+							<span class='percent'> 35 </span>
+							<canvas height='152' width="152"></canvas>
+						</span>
+						<h4>Cloud Technologies</h4>
+						<p> Azure Web Services | Azure Machine Learning | Azure Virtual Machines | 
+							Azure Databricks
+						</p>
+					</div>
+
+
+
+				</div>
+
+	
+			</div>
+
+		</div>
+	</div>
+
+	<div id='stats' class='statsSection section'>
+		<div class='container'>
+
+			<div class='row'> 
+
+				<div class='col-md-3 col-sm-6'>
+					<div class='squareItem'>
+						<div class='squareInnerContainer'>
+							<div class='squareIcon'>
+								<i class='fa fa-user-astronaut'></i>
+							</div>
+							<div class='squareContent'>
+								<h2 class='counter'>5</h2>
+								<h3>Years of Experience</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class='col-md-3 col-sm-6'>
+					<div class='squareItem'>
+						<div class='squareInnerContainer'>
+							<div class='squareIcon'>
+								<i class='fa fa-user-astronaut'></i>
+							</div>
+							<div class='squareContent'>
+								<h2 class='counter'>6</h2>
+								<h3>Web applications</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class='col-md-3 col-sm-6'>
+					<div class='squareItem'>
+						<div class='squareInnerContainer'>
+							<div class='squareIcon'>
+								<i class='fa fa-user-astronaut'></i>
+							</div>
+							<div class='squareContent'>
+								<h2 class='counter'>4</h2>
+								<h3>Projects</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class='col-md-3 col-sm-6'>
+					<div class='squareItem'>
+						<div class='squareInnerContainer'>
+							<div class='squareIcon'>
+								<i class='fa fa-user-astronaut'></i>
+							</div>
+							<div class='squareContent'>
+								<h2 class='counter'>1</h2>
+								<h3 > Certification </h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<div id='view_certificates' class="buttonSection">
+				<h3>View Certifications</h3>
+				<!-- Trigger the modal with a button -->
+				<button type="button" class="btn btn-info btn-lg viewButton" data-toggle="modal" data-target="#myModal">View</button>
+				
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog">
+					
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title left-align">List of Certifications</h4>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body">
+								<p> <a href = 'https://coursera.org/share/74c49332ac6525f7269eab017a708860' target='_'> SQL for Data Science</a>  <br>
+						
+									</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>	
+
+		</div>
+
+	<div id='contact' class='contactSection section'>
+
+		<div class='col-md-12 text-center'>
+			<p class='subHeading'> Like what you see?</p>
+			<h2>Take a look at my resume</h2>
+			<a href='Tucker_Resume_Data_Analyst.pdf' download='Tucker_Resume' class='contactButton'>DOWNLOAD</a>
+		</div>
+	</div>
+
+	<div id='portfolio' class='portfolioSection section'>
+		<div class='container'>
+
+			<div class='row'> 
+
+				<div class='heading'>
+					
+				<h6 class="ml6">
+					<span class="text-wrapper">
+					  <span class="letters">Portfolio</span>
+					</span>
+				</h6>
+				</div>
+
+
+				<div class='filter'>
+					<ul id='filters'>
+						<li> <a href='#' data-filter='*' class='current'>ALL</a> </li>
+						<li> <a href='#' data-filter='.apps'>Apps</a> </li>
+						<li> <a href='#' data-filter='.etl'>ETL</a> </li>
+						<li> <a href='#' data-filter='.machine_learning'>Machine learning</a> </li>
+					</ul>
+				</div>
+
+				<div class='itemsContainer'>
+
+					<ul class='items'>
+						<li onclick= '' class='apps col-xs-6 col-sm-4 col-md-3 col-lg-3'>
+							<div class='item'>
+								<img src="img/portfolio/thumbnail/journal_square.png">
+								<div class='icons'>
+									<a href='img/portfolio/journal.png' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
+										<i class='fa fa-search'></i>	
+									</a>									
+									<a href='https://github.com/codeanster/personal_journal' title='Go to Link' target='_blank' class='projectLink'>
+										<i class='fa fa-link'></i>	
+									</a>
+								</div>
+								<div class='imageOverlay'></div>
+								<h5 class = 'text-center'> Journal Webapp utilizing MySQL | Source Code</h5>
+							</div>
+						</li>
+
+						<li onclick= '' class='machine_learning col-xs-6 col-sm-4 col-md-3 col-lg-3'>
+							<div class='item'>
+								<img src="img/portfolio/thumbnail/upside_down_smile_square.jpg">
+								<div class='icons'>
+									<a href='/img/portfolio/upside_down_smile.jpg' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
+										<i class='fa fa-search'></i>	
+									</a>								
+									<a href='https://gist.github.com/codeanster/8b17f738e8144843d3027a1b6aab60eb' title='Go to Link' target='_blank' class='projectLink'>
+										<i class='fa fa-link'></i>	
+									</a>
+								</div>
+								<div class='imageOverlay'></div>
+								<h5 class = 'text-center'> Sentiment Analysis using Reddit data</h5>
+							</div>
+						</li>
+
+						<li onclick= '' class='etl col-xs-6 col-sm-4 col-md-3 col-lg-3'>
+							<div class='item'>
+								<img src="img/portfolio/thumbnail/fb_square.jpg">
+								<div class='icons'>
+									<a href='/img/portfolio/fb.jpg' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
+										<i class='fa fa-search'></i>	
+									</a>								
+									<a href='https://gist.github.com/codeanster/639e19dae2b1329cd3014fd93dbff64e' title='Go to Link' target='_blank' class='projectLink'>
+										<i class='fa fa-link'></i>	
+									</a>
+								</div>
+								<div class='imageOverlay'></div>
+								<h5 class = 'text-center'> Facebook Post Scraper using Selenium</h5>
+							</div>
+						</li>
+
+						<li onclick= '' class='machine_learning col-xs-6 col-sm-4 col-md-3 col-lg-3'>
+							<div class='item'>
+								<img src="img/portfolio/thumbnail/APOD20151216_square.jpg">
+								<div class='icons'>
+									<a href='img/portfolio/APOD20151216.jpg' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
+										<i class='fa fa-search'></i>	
+									</a>								
+									<a href='https://gist.github.com/codeanster/3b2226c0550250d0cffa59ba459657aa' title='Go to Link' target='_blank' class='projectLink'>
+										<i class='fa fa-link'></i>	
+									</a>
+								</div>
+								<div class='imageOverlay'></div>
+								<h5 class = 'text-center'> Galaxy Generator using StyleGan2</h5>
+							</div>
+						</li>	
+						
+
+					
+						
+					</ul>
+
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+
+	<div class='copyrightSection'>
+		<div class='col-md-12 text-center'>
+			<p>&copy; Copyright Gonzalo Tucker 2021</p>
+		</div>
+	</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="js/jquery.superslides.min.js"></script>
+<script src="js/countUp-jquery.js"></script>
+<script src="js/countUp.js"></script>
+<script src="js/jquery.easypiechart.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/typed.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
