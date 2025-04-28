@@ -8,11 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	
+	<link rel="preload" as="style" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<script src="https://kit.fontawesome.com/b4b25c656f.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
 
 </head>
 <body>
@@ -26,6 +29,7 @@
 	<div id="slides">
 
 		<div class = 'overlay'></div>
+		<div class="gradient-overlay"></div>
 
 		<div class="slides-container">
 			<img src="img/slide1.jpg" alt="">
@@ -41,10 +45,6 @@
 		</div>
 
 
-		<nav class="slides-navigation">
-		<a href="#" class="next"></a>
-		<a href="#" class="prev"></a>
-		</nav>
 	
 	
 	
@@ -85,18 +85,127 @@
 					<img class='aboutImage' src="img/about.jpg" alt="Gonzalo Tucker">
 				</div>
 				<div class='col-md-7'>
-					<h4>My name is Gonzalo Tucker</h4>
-					<p style="font-size: 16px">
-						I have a strong background in Astrophysics and mathematics, which has shaped my analytical approach to data-centric roles. Starting as a lab technician, I quickly transitioned into software engineering and QA testing, before finding my niche in data analysis and production support.
-						<br><br>
-						In my recent role as a Senior Production Support Engineer at CircleBlack Inc., I've honed my skills in Python, SQL, and data automation. I've implemented solutions for complex monthly reporting, engineered large-scale data adjustments, and played a key role in critical data migration projects. My ability to efficiently manage and resolve over 3000 JIRA tickets demonstrates my problem-solving skills and dedication to ensuring reliable service operations.
-						<br><br>
-						I'm particularly proud of my work on a data quality dashboard with the CTO, which was recognized company-wide. This project, along with my efforts in creating custom reports and automations for clients, showcases my ability to leverage data for actionable insights.
-						<br><br>
-						In addition to my professional experience, I've been deeply engaged with AI and machine learning technologies. My journey began with deep learning projects and has evolved to working with Large Language Models (LLMs). I've applied these cutting-edge technologies to various personal projects, demonstrating my ability to stay current with rapidly evolving tech trends. You can see examples of my AI and LLM work in the <a href="#portfolio">projects section</a> of this portfolio.
-						<br><br>
-						As a creative thinker with a stubborn persistence for solving problems, I thrive on challenges. Whether it's leveraging AI and LLMs for innovative solutions, pondering the nature of the universe, or finding practical ways to make database information more useful and automate complex processes, I'm always eager to apply my skills to new challenges and continue growing in the fields of data science, AI, and engineering.
-					</p>
+					<h4>Hi, I'm Gonzalo Tucker</h4>
+					<div class="about-highlight">
+						<p>
+							I'm a data engineer and AI enthusiast with roots in astrophysics and mathematics. These disciplines shape my analytical mindset and creative approach to problem-solving.
+						</p>
+						<p>
+							My professional journey began in the meticulous world of lab research and evolved into the dynamic realm of data pipeline engineering and production support.
+						</p>
+						<p>
+							At CircleBlack Inc., I thrived as a Senior Production Support Engineer, maintaining and automating complex custodial data integrations for Fidelity and Schwab. Handling thousands of daily accounts, I developed automated Python scripts, built real-time anomaly detection dashboards, and resolved over 3000 diverse technical issues—boosting operational efficiency and client satisfaction.
+						</p>
+						<p>
+							Beyond production expertise, I pursue passion projects in modern cloud technologies and AI. My current project, <strong>Soulstream</strong>, is an emotionally intelligent companion platform that uses advanced AI techniques—custom retrieval-augmented generation (RAG) and interactive memory integration—to create deeply personalized, meaningful AI interactions. This project demonstrates my ability to innovate at the intersection of AI, user experience, and data privacy.
+						</p>
+						<p>
+							I recently designed and implemented a robust mock Fidelity transaction pipeline leveraging AWS Lambda, Athena, SNS, and Python to proactively catch data anomalies, ensuring data integrity and auditability.
+						</p>
+						<blockquote class="about-quote">
+							I approach every challenge with relentless curiosity, blending creativity and technology to automate, simplify, and innovate.
+						</blockquote>
+						<p>
+							Whether building resilient data architectures, exploring the nuances of AI, or engaging with complex astrophysical concepts, I'm committed to continuous learning, growth, and impactful problem-solving.
+						</p>
+						<p>
+							Explore my latest projects, including <strong>Soulstream</strong>, and see how I'm harnessing data engineering and AI to make complex problems simpler and smarter in the <a href="#portfolio">projects section</a> of this portfolio.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='current-project' class='section'>
+		<div class="featuredProjectsBar">
+			<h2>Featured Projects</h2>
+			<p class='subHeading'>Highlighting my latest work</p>
+		</div>
+		<div class='container'>
+			<div class='project-showcase'>
+				<div class='project-navigation'>
+					<button class='nav-btn prev' title="Previous project" aria-label="Previous project"><i class="fa fa-chevron-left"></i></button>
+					<button class='nav-btn next' title="Next project" aria-label="Next project"><i class="fa fa-chevron-right"></i></button>
+				</div>
+				<div class='project-slides'>
+					<div class='project-slide active'>
+						<div class='row align-items-center'>
+							<div class='col-md-6'>
+								<img class='project-image' src="img/soulstream.png" alt="Soulstream Project Image" loading="lazy">
+							</div>
+							<div class='col-md-6'>
+								<div class='project-content'>
+									<h3>Soulstream</h3>
+									<p class='project-description'>An emotionally intelligent companion platform that utilizes advanced AI techniques, including custom retrieval-augmented generation (RAG) systems and interactive memory integration, to create deeply personalized and meaningful AI interactions.</p>
+									<div class='project-tech'>
+										<h4>Technologies</h4>
+										<ul>
+											<li>Advanced AI Techniques (RAG, Memory Integration)</li>
+											<li>Python</li>
+											<li>Cloud Services</li>
+											<li>APIs</li>
+										</ul>
+									</div>
+									<a href='https://vocal-llama-620ef4.netlify.app/' target='_blank' rel="noopener" class="project-link">Live Demo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='project-slide'>
+						<div class='row align-items-center'>
+							<div class='col-md-6'>
+								<img class='project-image' src="img/portfolio/jupiter.png" alt="Jupiter Project Image" loading="lazy">
+							</div>
+							<div class='col-md-6'>
+								<div class='project-content'>
+									<h3>Jupiter</h3>
+									<p class='project-description'>
+										An end-to-end ETL project to restore, process, and modernize historic Voyager mission data. Jupiter automates extraction, transformation, and loading of raw NASA imagery, leveraging cloud services to make 50+ celestial targets accessible for new scientific analysis and interactive visualization.
+									</p>
+									<div class='project-tech'>
+										<h4>Technologies</h4>
+										<ul>
+											<li>Python</li>
+											<li>ETL Pipelines</li>
+											<li>Cloud Services (AWS)</li>
+											<li>Data Restoration</li>
+											<li>Image Processing</li>
+											<li>Visualization</li>
+										</ul>
+									</div>
+									<a href='https://github.com/codeanster/Jupiter_project' target='_blank' rel="noopener" class="project-link">View on GitHub</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='project-slide'>
+						<div class='row align-items-center'>
+							<div class='col-md-6'>
+								<img class='project-image' src="img/portfolio/air_quality.jpg" alt="Air Quality Dashboard" loading="lazy">
+							</div>
+							<div class='col-md-6'>
+								<div class='project-content'>
+									<h3>Air Quality Monitoring System</h3>
+									<p class='project-description'>A comprehensive dashboard for monitoring and analyzing air quality data across Washington state, featuring real-time updates and historical trend analysis.</p>
+									<div class='project-tech'>
+										<h4>Technologies</h4>
+										<ul>
+											<li>Python (Streamlit)</li>
+											<li>Data Analysis</li>
+											<li>Visualization</li>
+											<li>Real-time Processing</li>
+										</ul>
+									</div>
+									<a href='https://codeanster-washington-air-quality-streamlit-app-eyqc5v.streamlit.app/' target='_blank' rel="noopener" class="project-link">View Dashboard</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='project-indicators'>
+					<span class='indicator active'></span>
+					<span class='indicator'></span>
+					<span class='indicator'></span>
 				</div>
 			</div>
 		</div>
@@ -188,7 +297,7 @@
 								<i class='fa fa-user-astronaut'></i>
 							</div>
 							<div class='squareContent'>
-								<h2 class='counter'>10</h2>
+								<h2 class='counter'>11</h2>
 								<h3>Projects</h3>
 							</div>
 						</div>
@@ -202,7 +311,7 @@
 								<i class='fa fa-user-astronaut'></i>
 							</div>
 							<div class='squareContent'>
-								<h2 class='counter'>3</h2>
+								<h2 class='counter'>4</h2>
 								<h3 > Certifications </h3>
 								</div>
 							</div>
@@ -221,21 +330,36 @@
 					<div class="modal-dialog">
 					
 						<!-- Modal content-->
-						<div class="modal-content">
+						<div class="modal-content cert-modal">
 							<div class="modal-header">
-								<h4 class="modal-title left-align">List of Certifications</h4>
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title cert-modal-title left-align">
+									<span class="fa fa-certificate cert-title-icon" aria-hidden="true"></span>
+									List of Certifications
+								</h4>
+								<button type="button" class="close cert-modal-close" data-dismiss="modal" aria-label="Close">&times;</button>
 							</div>
 							<div class="modal-body">
-								<p> <a href = 'https://www.credly.com/badges/32c67dac-c1db-49f1-9bd6-f43490339ea0/public_url' target='_'> AWS Certified Cloud Practitioner </a>  <br>
-									<a href = 'https://coursera.org/share/74c49332ac6525f7269eab017a708860' target='_'> SQL for Data Science</a>  <br>
-									<a href = 'https://coursera.org/share/af3e7ef52b6b0256d1909e3e92b7f750' target='_'> Distrubted Computing with Spark SQL </a>  
-
-									
-									</p>
+								<ul class="cert-list">
+									<li class="cert-item">
+										<span class="cert-icon"><i class="fa fa-award" aria-hidden="true"></i></span>
+										<a class="cert-link" href="https://www.credly.com/badges/32c67dac-c1db-49f1-9bd6-f43490339ea0/public_url" target="_blank" rel="noopener">AWS Certified Cloud Practitioner</a>
+									</li>
+									<li class="cert-item">
+										<span class="cert-icon"><i class="fa fa-database" aria-hidden="true"></i></span>
+										<a class="cert-link" href="https://coursera.org/share/74c49332ac6525f7269eab017a708860" target="_blank" rel="noopener">SQL for Data Science</a>
+									</li>
+									<li class="cert-item">
+										<span class="cert-icon"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+										<a class="cert-link" href="https://coursera.org/share/af3e7ef52b6b0256d1909e3e92b7f750" target="_blank" rel="noopener">Distributed Computing with Spark SQL</a>
+									</li>
+									<li class="cert-item">
+										<span class="cert-icon"><i class="fa fa-warehouse" aria-hidden="true"></i></span>
+										<a class="cert-link" href="https://www.credly.com/badges/aa2bb957-65af-4163-86f9-9d1f91dc8f09/public_url" target="_blank" rel="noopener">Build a Data Warehouse with BigQuery</a>
+									</li>
+								</ul>
 							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<div class="modal-footer cert-modal-footer">
+								<button type="button" class="btn btn-default cert-modal-close-btn" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 						
@@ -256,7 +380,7 @@
 							<a href='Tucker_Resume.pdf' download='Tucker_Resume' class='contactButton'>
 								<i class='fa fa-file-pdf'></i> View Resume
 							</a>
-							<a href='https://www.linkedin.com/in/gonzalo-tucker-976a251a0' target='_blank' class='contactButton'>
+							<a href='https://www.linkedin.com/in/gonzalo-tucker-976a251a0' target='_blank' rel="noopener" class='contactButton'>
 								<i class='fa fa-linkedin'></i> View LinkedIn
 							</a>
 						</div>
@@ -300,12 +424,12 @@
 					<ul class='items'>
 						<li onclick= '' class='apps machine_learning col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 							<div class='item'>
-								<img src="img/portfolio/thumbnail/journal_square.png">
+								<img src="img/portfolio/thumbnail/journal_square.png" alt="Journal Webapp thumbnail" loading="lazy">
 								<div class='icons'>
 									<!-- <a href='img/portfolio/journal.png' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
 										<i class='fa fa-search'></i>	
 									</a>									 -->
-									<a href='https://github.com/codeanster/personal_journal' title='Go to Link' target='_blank' class='projectLink'>
+									<a href='https://github.com/codeanster/personal_journal' title='Go to Link' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>	
 									</a>
 								</div>
@@ -316,12 +440,12 @@
 
 						<li onclick= '' class='machine_learning col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 							<div class='item'>
-								<img src="img/portfolio/thumbnail/upside_down_smile_square.jpg">
+								<img src="img/portfolio/thumbnail/upside_down_smile_square.jpg" alt="Sentiment Analysis project thumbnail" loading="lazy">
 								<div class='icons'>
 									<!-- <a href='/img/portfolio/upside_down_smile.jpg' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
 										<i class='fa fa-search'></i>	
 									</a>								 -->
-									<a href='https://gist.github.com/codeanster/8b17f738e8144843d3027a1b6aab60eb' title='Go to Link' target='_blank' class='projectLink'>
+									<a href='https://gist.github.com/codeanster/8b17f738e8144843d3027a1b6aab60eb' title='Go to Link' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>	
 									</a>
 								</div>
@@ -332,12 +456,12 @@
 
 						<li onclick= '' class='etl col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 							<div class='item'>
-								<img src="img/portfolio/thumbnail/fb_square.jpg">
+								<img src="img/portfolio/thumbnail/fb_square.jpg" alt="Facebook Post Scraper thumbnail" loading="lazy">
 								<div class='icons'>
 									<!-- <a href='/img/portfolio/fb.jpg' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
 										<i class='fa fa-search'></i>	
 									</a>								 -->
-									<a href='https://gist.github.com/codeanster/639e19dae2b1329cd3014fd93dbff64e' title='Go to Link' target='_blank' class='projectLink'>
+									<a href='https://gist.github.com/codeanster/codeanster/639e19dae2b1329cd3014fd93dbff64e' title='Go to Link' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>	
 									</a>
 								</div>
@@ -348,17 +472,17 @@
 
 						<li onclick= '' class='etl apps col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 							<div class='item'>
-								<img src="img/portfolio/thumbnail/air_quality_square.jpg">
+								<img src="img/portfolio/thumbnail/air_quality_square.jpg" alt="Air Quality Monitoring System thumbnail" loading="lazy">
 								<div class='icons'>
 									<!-- <a href='img/portfolio/air_quality.jpg' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
 										<i class='fa fa-search'></i>	
 									</a>								 -->
 
-									<a href='https://codeanster-washington-air-quality-streamlit-app-eyqc5v.streamlit.app/' title='View Dashboard' target='_blank' class='projectLink'>
+									<a href='https://codeanster-washington-air-quality-streamlit-app-eyqc5v.streamlit.app/' title='View Dashboard' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-file-code-o'></i>  
 									</a>
 
-									<a href='https://github.com/codeanster/washington_air_quality' title='Go to Link' target='_blank' class='projectLink'>
+									<a href='https://github.com/codeanster/washington_air_quality' title='Go to Link' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>	
 									</a>
 								</div>
@@ -369,12 +493,12 @@
 
 						<li onclick= '' class='machine_learning astronomy col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 							<div class='item'>
-								<img src="img/portfolio/thumbnail/APOD20151216_square.jpg">
+								<img src="img/portfolio/thumbnail/APOD20151216_square.jpg" alt="Galaxy Generator project thumbnail" loading="lazy">
 								<div class='icons'>
 									<!-- <a href='img/portfolio/APOD20151216.jpg' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
 										<i class='fa fa-search'></i>	
 									</a>								 -->
-									<a href='https://gist.github.com/codeanster/3b2226c0550250d0cffa59ba459657aa' title='Go to Code' target='_blank' class='projectLink'>
+									<a href='https://gist.github.com/codeanster/3b2226c0550250d0cffa59ba459657aa' title='Go to Code' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>	
 									</a>
 								</div>
@@ -382,14 +506,28 @@
 								<h5 class = 'text-center'> Galaxy Generator using StyleGan2</h5>
 							</div>
 						</li>	
+						<li onclick='' class='astronomy apps etl col-xs-6 col-sm-4 col-md-3 col-lg-3'>
+							<div class='item'>
+								<img src="img/portfolio/thumbnail/jupiter.png" alt="Jupiter Project thumbnail" loading="lazy">
+								<div class='icons'>
+									<a href='https://github.com/codeanster/Jupiter_project' title='View GitHub Repository' target='_blank' rel="noopener" class='projectLink'>
+										<i class='fa fa-link'></i>
+									</a>
+								</div>
+								<div class='imageOverlay'></div>
+								<h5 class='text-center'>Voyager Mission Data Analysis System: Automated processing, detection, and visualization of Voyager space mission imagery for 50+ celestial targets.</h5>
+								
+							</div>
+						</li>
+
 						<li onclick= '' class='llm col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 							<div class='item'>
-								<img src="img/portfolio/thumbnail/nature_ddlc_square.jpg">
+								<img src="img/portfolio/thumbnail/nature_ddlc_square.jpg" alt="LLM Story Creator project thumbnail" loading="lazy">
 								<div class='icons'>
 									<!-- <a href='img/portfolio/nature_ddlc.png' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
 										<i class='fa fa-search'></i>	
 									</a>								 -->
-									<a href='https://gist.github.com/codeanster/c88e5038491941ec10642d0b54f493a4' title='Go to Code' target='_blank' class='projectLink'>
+									<a href='https://gist.github.com/codeanster/c88e5038491941ec10642d0b54f493a4' title='Go to Code' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>	
 									</a>
 								</div>
@@ -400,12 +538,12 @@
 						
 						<li onclick= '' class='apps col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 							<div class='item'>
-								<img src="img/portfolio/thumbnail/portfolio_square.jpg">
+								<img src="img/portfolio/thumbnail/portfolio_square.jpg" alt="Portfolio code thumbnail" loading="lazy">
 								<div class='icons'>
 									<!-- <a href='img/portfolio/nature_ddlc.png' title='View Image' class='openButton' data-fancybox data-caption "This is a cute dog">
 										<i class='fa fa-search'></i>	
 									</a>								 -->
-									<a href='https://github.com/codeanster/portfolio' title='Go to Code' target='_blank' class='projectLink'>
+									<a href='https://github.com/codeanster/portfolio' title='Go to Code' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>	
 									</a>
 								</div>
@@ -416,14 +554,14 @@
 
 						<li onclick= '' class='llm apps col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 							<div class='item'>
-								<img src="img/portfolio/thumbnail/ssbc_square.png">
+								<img src="img/portfolio/thumbnail/ssbc_square.png" alt="Local Horror Group Website thumbnail" loading="lazy">
 								<div class='icons'>
 									<!-- Website Icon -->
 									<a href='https://www.spookyspookybookclub.com' title='Visit Website' class='openButton'>
 										<i class='fa fa-globe'></i> <!-- Add globe icon here -->
 									</a>
 									<!-- Code Repository Icon -->
-									<a href='https://gist.github.com/codeanster/c88e5038491941ec10642d0b54f493a4' title='View Code Repository' target='_blank' class='projectLink'>
+									<a href='https://gist.github.com/codeanster/c88e5038491941ec10642d0b54f493a4' title='View Code Repository' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>	
 									</a>
 								</div>
@@ -434,9 +572,9 @@
 						
 						<li onclick= '' class='astronomy col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 							<div class='item'>
-								<img src="img/portfolio/thumbnail/observation_planner_tool_sqaure.jpg"> 
+								<img src="img/portfolio/thumbnail/observation_planner_tool_sqaure.jpg" alt="Observation Planning Tool thumbnail" loading="lazy">
 								<div class='icons'>
-									<a href='https://gist.github.com/codeanster/90d95525c432323e61ad09439dacf34e' title='See Code' target='_blank' class='projectLink'>
+									<a href='https://gist.github.com/codeanster/90d95525c432323e61ad09439dacf34e' title='See Code' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>    
 									</a>
 
@@ -454,13 +592,13 @@
 
 						<li onclick= '' class='astronomy col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 							<div class='item'>
-								<img src="img/portfolio/thumbnail/blog_sqaure.jpg"> 
+								<img src="img/portfolio/thumbnail/blog_sqaure.jpg" alt="Astronomy Blog thumbnail" loading="lazy">
 								<div class='icons'>
-									<a href='http://astronomy.health.blog/' title='Go to Blog' target='_blank' class='projectLink'>
+									<a href='http://astronomy.health.blog/' title='Go to Blog' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>    
 									</a>
 
-									<a href='https://gist.github.com/codeanster/acee822fb3854576ff327007b9189edc' title='Go to Code' target='_blank' class='projectLink'>
+									<a href='https://gist.github.com/codeanster/acee822fb3854576ff327007b9189edc' title='Go to Code' target='_blank' rel="noopener" class='projectLink'>
 										<i class='fa fa-link'></i>    
 									</a>
 
@@ -484,14 +622,14 @@
 	</div>
 
               
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js" defer></script>
 <script src="js/jquery.superslides.min.js"></script>
 <script src="js/countUp-jquery.js"></script>
 <script src="js/countUp.js"></script>
 <script src="js/jquery.easypiechart.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/typed.min.js"></script>
-<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"> </script>
+<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>

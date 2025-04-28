@@ -13,23 +13,125 @@ $(window).on('load', function(){
         }
     })
 
-    //Get the DOM element that represents the <button> element.
-   //And set the onclick event
-   document.getElementById("LearnMoreBtn").onclick = function(){
-    //Set a variable to contain the DOM element of the overly
-    var overlay = document.getElementById("overlay");
-    //Set a variable to contain the DOM element of the popup
-    var popup = document.getElementById("popup");
-    
-    //Changing the display css style from none to block will make it visible
-    overlay.style.display = "block";
-    //Same goes for the popup
-    popup.style.display = "block";
- };
+    // Learn More button handler with error checking
+    const learnMoreBtn = document.getElementById("LearnMoreBtn");
+    if (learnMoreBtn) {
+        learnMoreBtn.onclick = function() {
+            try {
+                const overlay = document.getElementById("overlay");
+                const popup = document.getElementById("popup");
+                
+                if (!overlay || !popup) {
+                    console.error("Required overlay or popup elements not found");
+                    return;
+                }
+                
+                overlay.style.display = "block";
+                popup.style.display = "block";
+            } catch (error) {
+                console.error("Error in LearnMore button handler:", error);
+            }
+        };
+    }
 
 })
 
 $(document).ready(function(){
+    // Initialize project carousel
+    const projectCarousel = $('.project-slides');
+    let currentSlide = 0;
+    const slides = $('.project-slide');
+    const totalSlides = slides.length;
+    const indicators = $('.project-indicators .indicator');
+
+    // Function to update slide visibility and indicators
+    function updateSlide(index) {
+        // Handle circular navigation
+        if (index >= totalSlides) {
+            index = 0;
+        } else if (index < 0) {
+            index = totalSlides - 1;
+        }
+        
+        // Store new index before animation
+        const newSlide = index;
+        
+        // Fade out current slide
+        $(slides[currentSlide]).css({
+            opacity: 0,
+            visibility: 'hidden',
+            transform: 'translateX(-20px)'
+        });
+        
+        // Update indicators
+        indicators.removeClass('active');
+        $(indicators[newSlide]).addClass('active');
+        
+        // Short delay before showing new slide
+        setTimeout(() => {
+            slides.removeClass('active');
+            currentSlide = newSlide;
+            
+            // Fade in new slide
+            $(slides[currentSlide])
+                .addClass('active')
+                .css({
+                    opacity: 1,
+                    visibility: 'visible',
+                    transform: 'translateX(0)'
+                });
+        }, 300);
+    }
+
+    // Navigation button handlers
+    $('.nav-btn.prev').click(function() {
+        updateSlide(currentSlide - 1);
+    });
+
+    $('.nav-btn.next').click(function() {
+        updateSlide(currentSlide + 1);
+    });
+
+    // Indicator click handlers
+    indicators.each(function(index) {
+        $(this).click(function() {
+            updateSlide(index);
+        });
+    });
+
+    // Touch support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    projectCarousel.on('touchstart', function(e) {
+        touchStartX = e.originalEvent.touches[0].clientX;
+    });
+
+    projectCarousel.on('touchend', function(e) {
+        touchEndX = e.originalEvent.changedTouches[0].clientX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const swipeDistance = touchEndX - touchStartX;
+        
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                // Swipe right - show previous
+                updateSlide(currentSlide - 1);
+            } else {
+                // Swipe left - show next
+                updateSlide(currentSlide + 1);
+            }
+        }
+    }
+
+    // Remove auto-advance functionality
+    // Only manual navigation through arrows is allowed
+
+    // Initialize first slide
+    updateSlide(0);
 
     $('#slides').superslides({
         animation: 'fade',
@@ -154,24 +256,40 @@ $(document).ready(function(){
 })
 
 
-// Wrap every letter in a span
-var textWrapper = document.querySelector('.ml6 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+// Animation with error handling
+try {
+    const textWrapper = document.querySelector('.ml6 .letters');
+    if (!textWrapper) {
+        console.error("Text wrapper element not found");
+    } else {
+        // Safely wrap letters in spans
+        try {
+            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+        } catch (error) {
+            console.error("Error wrapping letters:", error);
+        }
 
-anime.timeline({loop: true})
-.add({
-    targets: '.ml6 .letter',
-    translateY: ["1.1em", 0],
-    translateZ: 0,
-    duration: 750*2.4,
-    delay: (el, i) => 80 * i
-}).add({
-    targets: '.ml6',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 100
-});
-
-
+        // Initialize animation with error handling
+        try {
+            anime.timeline({loop: true})
+                .add({
+                    targets: '.ml6 .letter',
+                    translateY: ["1.1em", 0],
+                    translateZ: 0,
+                    duration: 750*2.4,
+                    delay: (el, i) => 80 * i
+                }).add({
+                    targets: '.ml6',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 100
+                });
+        } catch (error) {
+            console.error("Error initializing animation:", error);
+        }
+    }
+} catch (error) {
+    console.error("Error in animation setup:", error);
+}
 
